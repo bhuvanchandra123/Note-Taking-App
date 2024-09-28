@@ -3,8 +3,8 @@ const fs = require("fs");
 
 const notesFile = "notes.json";
 const readFileFromNotes = ()=>{
-    const data = fs.readFileSync(notesFile) 
     try{
+        const data = fs.readFileSync(notesFile) 
         const parseData =  JSON.parse(data.toString()) 
         return Array.isArray(parseData) ? parseData : []
     } catch{
